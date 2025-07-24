@@ -61,9 +61,14 @@ function loadingAnimation() {
 }
 // loadingAnimation()
 
-document.addEventListener("mousemove", function (dets) {
-  gsap.to(".crsr", {
-    left: dets.x,
-    top: dets.y,
+function cursor() {
+  document.addEventListener("mousemove", function (dets) {
+    gsap.to(".crsr", {
+      left: dets.x,
+      top: dets.y,
+    });
   });
-});
+
+  Shery.makeMagnet(".nav-links-right h4, .left-logo-container #first-svg");
+}
+cursor();
