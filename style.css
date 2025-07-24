@@ -27,7 +27,16 @@ body {
   font-family: plain-l;
   src: url(./fonts/plain-light-webfont.woff);
 }
-
+.crsr {
+  width: 3vw;
+  height: 3vw;
+  border: 0.8px solid #d2d1d1;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
 #loader {
   height: 100%;
   width: 100%;
