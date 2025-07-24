@@ -60,4 +60,4 @@ tl.to("#loader", {
 });
 
 }
-loadingAnimation()
+// loadingAnimation()

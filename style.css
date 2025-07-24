@@ -168,3 +168,43 @@ body {
   align-items: center;
   gap: 3vw;
 }
+.hero-text-container {
+  line-height: 7.5vw;
+}
+
+.hero-text:nth-child(1) {
+  margin-top: 5vw;
+}
+.hero-text:nth-child(1)::before {
+  content: "01";
+  font-size: 3.2vw;
+  font-family: silkserif-r;
+}
+.hero-text {
+  width: 70%;
+  margin-left: 28.4%;
+}
+
+.hero-text h1 {
+  font-size: 7.3vw;
+  text-transform: uppercase;
+  font-family: plain-l;
+  letter-spacing: 0.2vw;
+}
+
+#hero-text-1 {
+  display: flex;
+  gap: 6.7vw;
+  margin-left: 18%;
+}
+
+#hero-text-3 {
+  display: flex;
+  gap: 0.5vw;
+}
+#hero-text-3 h1 {
+  border-bottom: 0.6vw solid #ffffff;
+}
+#hero-text-3 span {
+  font-size: 7.3vw;
+}
