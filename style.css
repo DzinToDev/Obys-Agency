@@ -1,9 +1,137 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: plain-l;
 }
-html, body {
-    width: 100%;
-    height: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: silkserif-r;
+  src: url(./fonts/silkserif-regularitalic-webfont.woff);
+}
+@font-face {
+  font-family: silkserif-l;
+  src: url(./fonts/silkserif-lightitalic-webfont.woff);
+}
+@font-face {
+  font-family: plain-r;
+  src: url(./fonts/plain-regular-webfont.woff);
+}
+@font-face {
+  font-family: plain-l;
+  src: url(./fonts/plain-light-webfont.woff);
+}
+
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: #0b0b0b;
+  position: fixed;
+  z-index: 999;
+  padding: 19vh 6vw;
+}
+
+.counter-num {
+  display: flex;
+  gap: 5px;
+  opacity: 0;
+}
+
+.counter-num h5 {
+  font-size: 3vw;
+  width: 5vw;
+  font-family: silkserif-r;
+  text-align: right;
+  /* background-color: coral; */
+}
+
+.counter-num h4 {
+  font-size: 3vw;
+  /* width: 5vw; */
+  font-family: silkserif-r;
+}
+
+
+#line-1 {
+ 
+  align-items: start;
+  gap: 6%;
+  padding-left: 4%;
+}
+
+.line {
+  /* background-color: coral; */
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.line h1 {
+  font-size: 6.5vw;
+  /* font-weight: 600; */
+  font-family: plain-l;
+}
+
+
+#line-3 h5{
+   font-size: 6.5vw;
+   font-family: silkserif-l;
+   /* animation-name: anime; */
+   animation-delay: 3;
+   animation-duration: 2.5s;
+   animation-iteration-count: infinite;
+   opacity: 0;
+   
+}
+
+#line-3 {
+  /* background-color: chocolate; */
+  height: 6vw;
+}
+
+@keyframes anime {
+  0% {
+    font-family: silkserif-l ;
+    -webkit-text-stroke: 1px #ffffff;
+    font-weight: 500;
+    opacity: 1;
+  }
+  48% {
+    font-family: silkserif-l ;
+    -webkit-text-stroke: 1px #ffffff;
+    opacity: 0;
+  }
+  50% {
+    font-family: plain-l;
+    -webkit-text-stroke: 1px #ffffff;
+    opacity: 1;
+  }
+  100% {
+    font-family: plain-l;
+    opacity: 0;
+  }
+}
+
+.wait-msg {
+  margin-left: 25%;
+  margin-top: 5%;
+  opacity: 0;
+}
+
+#main {
+  position: relative;
+}
+
+.page {
+  background: #151515;
+  width: 100%;
+  height: 100dvh;
 }
