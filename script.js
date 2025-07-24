@@ -1,4 +1,5 @@
-gsap.registerPlugin(SplitText);
+function loadingAnimation(){
+  gsap.registerPlugin(SplitText);
 // CustomEase.create("our-ease","0.925, 0.5, 0, 1");
 
 // gsap.from(".line h1", {
@@ -57,3 +58,6 @@ tl.to("#loader", {
   y: "-100%",
   duration: 0.3,
 });
+
+}
+loadingAnimation()
