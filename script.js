@@ -59,7 +59,7 @@ function loadingAnimation() {
     duration: 0.3,
   });
 }
-// loadingAnimation()
+loadingAnimation()
 
 function cursor() {
   document.addEventListener("mousemove", function (dets) {
