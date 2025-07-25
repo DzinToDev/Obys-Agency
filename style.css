@@ -48,7 +48,7 @@ body {
   position: fixed;
   z-index: 999;
   padding: 19vh 6vw;
-  display: none;
+  /* display: none; */
 }
 
 .counter-num {
