@@ -348,8 +348,7 @@ position: relative;
 
   width: 50%;
 }
-.p4-imgs-container img{
-}
+
 .p4-img-top p {
   width: 38%;
 }
@@ -386,3 +385,56 @@ font-size: 1vw;
   font-size: 1vw;
 }
 
+#page5 {
+  width: 100%;
+  height: 100dvh;
+  /* background-color: chocolate; */
+  position: relative;
+  padding-top: 5vw;
+}
+
+.merque {
+  /* background-color: chocolate; */
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.merque h1 {
+  font-size: 7.3vw;
+  -webkit-text-stroke: 1px #ffffff;
+  font-weight: 200;
+  color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  /* background-color: chocolate; */
+  margin-right: 16px ;
+ 
+  margin-bottom: 1vw;
+}
+#merque-l h1{
+  animation-name: merques-left;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#merque-r h1{
+  animation-name: merques-left;
+  animation-direction: reverse;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: translateX(-100%);
+
+}
+
+.merque span {
+  font-style: italic;
+  color: transparent;
+}
+
+@keyframes merques-left {
+  from{
+    transform: translateX(0);
+  }to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
