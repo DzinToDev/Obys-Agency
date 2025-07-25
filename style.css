@@ -138,6 +138,10 @@ body {
 
 .page {
   background: #151515;
+
+}
+
+#page1 {
   width: 100%;
   height: 100dvh;
 }
