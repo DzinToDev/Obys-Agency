@@ -221,6 +221,7 @@ body {
   -webkit-text-stroke: 0.5px #ffffff;
   color: transparent;
   font-weight: 600;
+  border-bottom: 0px solid transparent;
 }
 #hero-text-3 span {
   font-size: 7.3vw;
