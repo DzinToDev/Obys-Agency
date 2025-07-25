@@ -185,14 +185,16 @@ body {
 .hero-text:nth-child(1) {
   margin-top: 5vw;
 }
-.hero-text:nth-child(1)::before {
-  content: "01";
+.line-num01 {
+  /* background-color: coral; */
   font-size: 3.2vw;
   font-family: silkserif-r;
 }
+
 .hero-text {
   width: 70%;
   margin-left: 28.4%;
+  overflow: hidden;
 }
 
 .hero-text h1 {
@@ -214,6 +216,11 @@ body {
 }
 #hero-text-3 h1 {
   border-bottom: 0.6vw solid #ffffff;
+}
+#hero-text-3 h1:hover {
+  -webkit-text-stroke: 0.5px #ffffff;
+  color: transparent;
+  font-weight: 600;
 }
 #hero-text-3 span {
   font-size: 7.3vw;

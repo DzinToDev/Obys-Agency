@@ -58,6 +58,24 @@ function loadingAnimation() {
     y: "-100%",
     duration: 0.3,
   });
+  tl.from("#nav", {
+    opacity:0
+  })
+
+  tl.from(".hero-text h1, #hero-text-3 span", {
+    yPercent: 200,
+    stagger: 0.25,
+    ease: "power2.out",
+    duration: 0.5,
+    delay: 0.5,
+  }, 'h');
+
+
+  tl.from(".line-num01", {
+    opacity: 0 ,
+    duration: 0.5,
+  },'h')
+
 }
 loadingAnimation()
 
