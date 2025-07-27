@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obys Agency by me</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link
@@ -37,7 +38,7 @@
       </div>
     </div>
     <div id="main">
-      <div class="page" id="page1">
+      <div class="page" id="page1" data-scroll >
         <nav id="nav">
           <div class="nav-left-container">
             <div class="left-logo-container">
@@ -144,7 +145,7 @@
             <h4>Contact</h4>
           </div>
         </nav>
-        <div class="hero-text-container">
+        <div class="hero-text-container" data-scroll data-scroll-speed="2">
           <div class="hero-text" id="hero-text-1">
             <span class="line-num01">01</span>
             <h1>We design</h1>
@@ -162,7 +163,7 @@
           </div>
         </div>
       </div>
-      <div class="page" id="page2">
+      <div class="page" id="page2" data-scroll>
         <div class="video-container">
           <div class="play-follower"><i class="ri-play-large-fill"></i></div>
           <video
@@ -293,6 +294,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
       integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
