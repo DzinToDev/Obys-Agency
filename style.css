@@ -48,7 +48,7 @@ body {
   position: fixed;
   z-index: 999;
   padding: 19vh 6vw;
-  /* display: none; */
+  display: none;
 }
 
 .counter-num {
@@ -138,6 +138,7 @@ body {
 
 #main {
   position: relative;
+  background: #151515;
 }
 
 .page {
@@ -286,12 +287,232 @@ body {
 #page3 {
   width: 100%;
   min-height: 100dvh;
-  background-color: #0b0b0b;
+  padding-bottom: 9vw;
+  /* background-color: #0b0b0b; */
+  flex-direction: column;
+  display: flex;
+justify-content: center;
+
+  /* gap: 3vw; */
+}
+
+.p3-heading-container {
+  /* background-color: chocolate; */
+ display: flex;
+  justify-content: flex-end;
+  gap: 3vw;
+   width: 100%;
+   height: fit-content;
+  padding-right: 6vw;
+}
+.p3-heading {
+  /* background-color: #FFA63D; */
+  width: 71%;
+}
+.p3-heading h1{
+font-size: 7.3vw;
+  text-transform: uppercase;
+  font-family: plain-l;
+  letter-spacing: 0.2vw;
+  margin-bottom: 5vw;
+}
+
+.img-div-container {
+  padding: 5vw 5.5vw;
+  min-height: 100dvh;
+
+}
+.img-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2vw;
+  width: 100%;
+}
+.img-card {
+  position: relative;
+}
+#img-card1 {
+  height: fit-content;
+  width: 24vw;
+}
+
+
+.img-card-heading {
+  height: fit-content;
+}
+.img-card-heading h1 {
+  font-size: 3vw;
+  text-transform: uppercase;
+
+
+}
+.img-div {
+  position: relative;
+  width: 100%;
+  margin: 2vw 0;
+  
+}
+#img-card1 .img-div {
+  height: 30vw;
+}
+.img-div img {
+  width: 100%;
+  height: 100%;
+}
+.img-1-top {
+  position: absolute;
+}
+.img-text {
+  width: 100%;
+  margin-bottom: 1.5vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.img-text p {
+  width: 50%;
+  font-size: 1.1vw;
+
+}
+.img-text h6 {
+  font-size: 1.1vw;
+}
+
+#img-card2 {
+  height: fit-content;
+  width:30vw;
+  margin-right: 8vw;
+}
+#img-card2 .img-div {
+  height: 38vw;
+}
+
+.img-side-circle1 {
+  width: 23vw;
+  height: 23vw;
+  border-radius: 50%;
+  border: 1px solid #d2d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25vw;
+  /* margin-left: 4vw; */
+  position: relative;
+}
+
+.img-side-circle1 svg{
+  height: 36%;
+}
+
+.circle-hover {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  transition: all ease 0.3s;
+  z-index: 111;
+  pointer-events: none;
+
+}
+.circle-hover p {
+  color: black;
+  font-size: 1vw;
+  scale: 0;
+  transition: all ease 0.3s;
+  transition-delay: 0.3s;
+}
+.img-side-circle1:hover .circle-hover{
+  scale: 1;
+}
+.img-side-circle1:hover .circle-hover p{
+  scale: 1;
+}
+.img-side-circle2:hover .circle-hover{
+  scale: 1;
+}
+.img-side-circle2:hover .circle-hover p{
+  scale: 1;
+}
+.img-side-circle4:hover {
+  scale: 0.9;
+}
+.img-side-circle2 {
+  width: 23vw;
+  height: 23vw;
+  border-radius: 50%;
+  border: 1px solid #d2d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vw;
+  position: relative;
+}
+
+.img-side-circle2 svg{
+  height: 36%;
+  rotate: -45deg;
+}
+.img-side-circle4 {
+  width: 23vw;
+  height: 23vw;
+  border-radius: 50%;
+color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 37%;
+  margin: 5% 10% 0% 37%;
+  background-color: #FFA63D;
+  transition: all ease 0.3s;
+}
+
+.img-side-circle4 p{
+font-size: 1vw;
+}
+.img-side-circle4 span{
+font-size: 1vw;
+font-family: silkserif-r;
+}
+
+#circle3 svg{
+  rotate: -90deg;
+}
+
+#img-card3 {
+  height: fit-content;
+  width:30vw;
+  margin-top: 3.5vw;
+  /* background-color: #FFA63D; */
+}
+#img-card3 .img-div {
+  height: 38vw;
+}
+#img-card4 {
+  height: fit-content;
+  width:30vw;
+  /* margin-left: 3.5vw; */
+}
+#img-card4 .img-div {
+  height: 38vw;
+}
+#img-row2 {
+  align-items: flex-start;
+}
+#img-row3 {
+  align-items: flex-end;
 }
 
 #page4 {
   width: 100%;
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
   display: flex;
   justify-content: flex-end;
   gap: 3vw;
@@ -477,4 +698,9 @@ font-size: 1vw;
 
 .f-container p {
   margin-top: 2.5vw;
+}
+
+._canvas_container {
+  z-index: 99999 !important;
+  pointer-events: none;
 }
