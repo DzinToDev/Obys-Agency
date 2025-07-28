@@ -109,7 +109,7 @@ function loadingAnimation() {
   },'h')
 
 }
-// loadingAnimation()
+loadingAnimation()
 
 function cursor() {
   document.addEventListener("mousemove", function (dets) {
