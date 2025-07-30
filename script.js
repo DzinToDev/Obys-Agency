@@ -113,7 +113,7 @@ function loadingAnimation() {
   })
 
 }
-// loadingAnimation()
+loadingAnimation()
 
 function cursor() {
 
