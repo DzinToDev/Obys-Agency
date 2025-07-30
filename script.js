@@ -186,7 +186,6 @@ cursor();
 
 
 
-
 function sheryAnimation(){
   Shery.imageEffect(".img-div", {
     style:5,

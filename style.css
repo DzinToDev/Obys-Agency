@@ -254,6 +254,7 @@ body {
   display: flex;
   justify-content: flex-end;
   padding-top: 3vw;
+  position: relative;
 }
 
 .video-container {
@@ -540,7 +541,6 @@ font-family: silkserif-r;
 .p4-container {
   width: 71%;
   padding-right: 6vw;
-  /* background-color: coral; */
 }
 
 .p4-heading {
@@ -752,3 +752,320 @@ gap: 2vw;
  pointer-events: none;
 
 } */
+
+@media (max-width: 600px) {
+ 
+#page1 {
+  height: 65dvh;
+  padding-top: 1px;
+  position: relative;
+}
+
+#page1 #nav {
+  width: 100%;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+.nav-left-container {
+  width: 100%;
+  
+}
+.left-logo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.nav-links-left  {
+  display: none;
+}
+.nav-links-right {
+  display: none;
+}
+
+.hero-text-container {
+  line-height: 8vw;
+}
+
+.hero-text:nth-child(1) {
+  margin-top: 30vw;
+}
+
+.hero-text {
+  width: 100%;
+  margin-left: 5%;
+}
+#hero-text-1 span {
+  font-size: 4vw;
+}
+.hero-text h1 {
+  font-size: 8.5vw;
+  letter-spacing: -0.1vw;
+}
+
+#hero-text-1 {
+  flex-direction: column;
+  gap: 0vw;
+  margin-left: 5%;
+}
+
+/* page2 responsive */
+
+
+.video-container {
+  width: 100%;
+  position: relative;
+  /* z-index: 1000; */
+}
+
+
+.play-follower {
+  width: 15vw;
+  height: 15vw;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.play-follower i {
+  font-size: 3vw;
+}
+
+/* page3 responsive */
+
+.img-row  {
+  flex-direction: column;
+}
+.p3-heading-container {
+flex-direction: column;
+  gap: 3vw;
+  padding: 2vw;
+}
+.p3-heading {
+  width: 100%;
+}
+
+.img-row {
+  width: 100%;
+  min-height: 100dvh;
+
+  gap: 2vw;
+}
+
+#img-card1 {
+  height: fit-content;
+  width: 90vw;
+  height: 100dvh;
+  /* background-color: #b6cefc; */
+}
+
+.img-card-heading h1 {
+  font-size: 5vw;
+
+}
+.img-div {
+  margin: 3vw 0;
+}
+#img-card1 .img-div {
+  height: 85dvh;
+}
+.img-text {
+  margin-bottom: 4vw;
+}
+.img-text p {
+  width: 70%;
+  font-size: 2.5vw;
+
+}
+.img-text h6 {
+  font-size: 2.5vw;
+}
+
+#img-card2 {
+  height: fit-content;
+  width:90vw;
+  margin-right: 8vw;
+}
+#img-card2 .img-div {
+  height: 85dvh;
+}
+
+.img-side-circle1 {
+  display: none;
+}
+
+.img-side-circle2 {
+  display: none;
+}
+
+.img-side-circle4 {
+  width: 30vw;
+  height: 30vw;
+
+}
+.img-side-circle4 p{
+font-size: 2.5vw;
+}
+.img-side-circle4 span{
+font-size: 2.5vw;
+}
+
+#img-card3 {
+  height: fit-content;
+  width:90vw;
+}
+#img-card3 .img-div {
+  height: 85dvh;
+}
+#img-card4 {
+  width:90vw;
+}
+#img-card4 .img-div {
+  height: 85dvh;
+}
+
+/* page4 responsive */
+
+#page4 {
+  width: 100%;
+  flex-direction: column;
+  gap: 3vw;
+  /* background-color: #d2d1d1; */
+  padding: 5vw;
+}
+
+.p4-container {
+  width: 100%;
+  padding-right: 0vw;
+  /* background-color: coral; */
+}
+
+.p4-heading h1 {
+  font-size: 7.3vw;
+  margin-bottom: 2vw;
+  
+}
+
+.p4-content-wrapper {
+  padding-top: 3vw;
+  width: 100%;
+}
+
+.p4-content-wrapper > p {
+  font-size: 5vw;
+  width: 90%;
+}
+.p4-imgs-container {
+
+margin-top: 2vw;
+padding-bottom: 10vw;
+position: relative;
+}
+
+.p4-img-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2.5vw;
+}
+
+.p4-img-top img {
+  width: 100%;
+}
+
+.p4-img-top p {
+  width: 55%;
+}
+
+.p4-blue-card {
+  width: 100%;
+  position: relative;
+  padding: 3.5vw;
+  margin-top: 0vw;
+  margin-left: 0vw;
+  /* right: 0;
+  top: 50%; */
+}
+
+.blue-card-contnet {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3vw;
+  border-bottom: 1px solid #ffffff;
+  padding-top: 3vw;
+/* background-color: #FFA63D; */
+}
+
+.blue-card-contnet h4{
+font-size: 3vw;
+width: 50%;
+margin-bottom: 3vw;
+}
+.blue-card-contnet p{
+font-size: 2.5vw;
+width: 50%;
+}
+
+.p4-container h5{
+  margin-top: 5vw;
+  font-size: 2.5vw;
+
+}
+
+/* page5 responsive */
+
+#page5 {
+  height: 55dvh;
+}
+
+
+/* footer responsive  */
+
+#footer {
+  height: 95dvh;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 3vw;
+  padding: 4vw 5vw 4vw 5vw;
+  /* background-color: #FFA63D; */
+}
+
+.f-container {
+  /* background-color: #3F7DF4; */
+  width: 100%;
+  padding-right: 0vw;
+}
+
+#f-links {
+  width: 100%;
+  flex-direction: column;
+  gap: 5vw;
+}
+
+
+.f-l-box h6{
+  font-size: 3vw;
+  margin-bottom: 1.5vw;
+}
+.f-l-box h5{
+  font-size: 3.5vw;
+}
+
+.f-container p {
+  margin-top: 2.5vw;
+}
+#footerLetsConnect {
+justify-content: flex-start;
+gap: 2vw;
+}
+
+#footerLetsConnect svg {
+  width: 7vw;
+  margin-top: 2vw;
+  transition: all ease 0.3s;
+
+}
+
+}
