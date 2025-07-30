@@ -107,21 +107,85 @@ function loadingAnimation() {
     opacity: 0 ,
     duration: 0.5,
   },'h')
+  tl.from(".video-container",{
+    opacity:0,
+    duration: 0.5
+  })
 
 }
-loadingAnimation()
+// loadingAnimation()
 
 function cursor() {
-  document.addEventListener("mousemove", function (dets) {
-    gsap.to(".crsr", {
-      left: dets.x,
-      top: dets.y,
-    });
-  });
 
-  Shery.makeMagnet(".nav-links-right h4, .left-logo-container #first-svg");
+Shery.makeMagnet(".nav-links-right h4, .left-logo-container #first-svg");
+
+const crsr = document.querySelector(".crsr")
+document.addEventListener("mousemove", function (e) {
+  gsap.to(crsr, {
+    left: e.clientX,
+    top: e.clientY,
+  });
+});
+
+const videoContainer = document.querySelector(".video-container");
+const video = document.querySelector(".video-container video");
+const imgVideo = document.querySelector(".video-container img");
+const playFollower = document.querySelector(".play-follower");
+let flag = 0
+videoContainer.addEventListener("mouseenter", ()=> {
+ videoContainer.addEventListener("mousemove", (e)=> {
+  gsap.to(crsr, {
+    scale:0,
+    display: "none"
+  })
+  gsap.to(playFollower, {
+    left: e.clientX - 450,
+    top: e.clientY - 300,
+  });
+ })
+})
+videoContainer.addEventListener("mouseleave", ()=> {
+  gsap.to(crsr, {
+    scale:1,
+    display: "block"
+    
+  })
+  gsap.to(playFollower, {
+    top: "-15%",
+  left: "70%"
+  })
+})
+videoContainer.addEventListener("click", ()=> {
+  if(flag == 0){
+  video.play()
+  video.style.opacity = 1;
+  playFollower.innerHTML = `<i class="ri-pause-mini-line"></i>`
+  gsap.to(imgVideo, {
+    opacity: 0,
+  })
+  gsap.to(playFollower, {
+    scale: 0.7
+  })
+  flag = 1
+}else {
+  video.pause()
+  video.style.opacity = 1;
+  // playFollower.innerHTML = `<i class="ri-pause-mini-line"></i>`
+  gsap.to(imgVideo, {
+    opacity: 1,
+  })
+  gsap.to(playFollower, {
+    scale: 1
+  })
+  flag = 0
 }
-// cursor();
+})
+
+}
+cursor();
+
+
+
 
 function sheryAnimation(){
   Shery.imageEffect(".img-div", {
