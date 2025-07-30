@@ -221,10 +221,9 @@ heroText3.addEventListener("mouseleave", ()=> {
 function footerLetsConnet(){
   const footerLetsconnecth1 = document.querySelector("#footerLetsConnect h1");
 
-// ✅ Step 1: Set opacity to 1 directly (Textillate sets it to 0 by default)
 gsap.set(footerLetsconnecth1, { opacity: 1, visibility: "visible" });
 
-// ✅ Step 2: Setup Textillate WITHOUT autoStart
+
 $(footerLetsconnecth1).textillate({
   autoStart: false,
   in: { 
@@ -238,11 +237,8 @@ $(footerLetsconnecth1).textillate({
 // Step 3: Run it once on page load to show text
 $(footerLetsconnecth1).textillate('start');
 
-// ✅ Step 3: Store original font
-// const originalFont = window.getComputedStyle(footerLetsconnecth1).fontFamily;
-
 const footerSvg = document.querySelector("#footerLetsConnect svg")
-// ✅ Step 4: Hover IN → font change + animation
+
 footerLetsconnecth1.addEventListener("mouseenter", () => {
   footerLetsconnecth1.style.fontStyle = "italic";
   footerLetsconnecth1.style.webkitTextStroke = "0.5px #ffffff";
@@ -255,7 +251,7 @@ footerLetsconnecth1.addEventListener("mouseenter", () => {
   $(footerLetsconnecth1).textillate('in');
 });
 
-// ✅ Step 5: Hover OUT → font revert + animation again
+
 footerLetsconnecth1.addEventListener("mouseleave", () => {
   footerLetsconnecth1.style.fontStyle = "normal";
   footerLetsconnecth1.style.webkitTextStroke = "0px transparent";
