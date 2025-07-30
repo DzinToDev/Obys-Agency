@@ -32,6 +32,7 @@ ScrollTrigger.refresh();
 locomotive()
 function loadingAnimation() {
   gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(ScrollTrigger)
   // CustomEase.create("our-ease","0.925, 0.5, 0, 1");
 
   // gsap.from(".line h1", {
@@ -111,6 +112,29 @@ function loadingAnimation() {
     opacity:0,
     duration: 0.5
   })
+
+  gsap.from(".heding-wrapper h1", {
+    yPercent: 200,
+    ease: "power2.out",
+    duration: 0.5,
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: "#page3",
+      scroller:"#main",
+      start: "top 98%",
+      end: "top 90%"
+    }
+  },'p3')
+  gsap.from("#num-p3", {
+    opacity: 0 ,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: "#page3",
+      scroller:"#main",
+      start: "top 99%",
+      end: "top 90%",
+    }
+  },'p3')
 
 }
 loadingAnimation()

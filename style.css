@@ -55,7 +55,6 @@ body {
   position: fixed;
   z-index: 999;
   padding: 19vh 6vw;
-
 }
 
 .counter-num {
@@ -202,11 +201,12 @@ body {
 .hero-text:nth-child(1) {
   margin-top: 5vw;
 }
-.line-num01 {
+.line-num01, .line-num02 , .line-num03, .line-num04   {
   /* background-color: coral; */
   font-size: 3.2vw;
   font-family: silkserif-r;
 }
+
 
 .hero-text {
   width: 70%;
@@ -328,13 +328,20 @@ justify-content: center;
 .p3-heading {
   /* background-color: #FFA63D; */
   width: 71%;
+  overflow: hidden;
 }
-.p3-heading h1{
+.heding-wrapper {
+  /* background-color: #3F7DF4; */
+  height: fit-content;
+  overflow: hidden;
+  margin-bottom: 5vw;
+}
+.heding-wrapper h1{
 font-size: 7.3vw;
   text-transform: uppercase;
   font-family: plain-l;
   letter-spacing: 0.2vw;
-  margin-bottom: 5vw;
+  
 }
 
 .img-div-container {
