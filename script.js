@@ -63,7 +63,7 @@ function loadingAnimation() {
           counterNum.innerHTML = grow++;
           if (grow > 100) {
             clearInterval(interval); // Stop the timer
-            console.log("⛔ Counter stopped at", grow);
+            // console.log("⛔ Counter stopped at", grow);
           }
         }, 45);
       },
@@ -140,7 +140,7 @@ videoContainer.addEventListener("mouseenter", ()=> {
   })
   gsap.to(playFollower, {
     left: e.clientX - 450,
-    top: e.clientY - 300,
+    top: e.clientY - 200,
   });
  })
 })
@@ -170,7 +170,7 @@ videoContainer.addEventListener("click", ()=> {
 }else {
   video.pause()
   video.style.opacity = 1;
-  // playFollower.innerHTML = `<i class="ri-pause-mini-line"></i>`
+  playFollower.innerHTML = `<i class="ri-play-large-fill"></i>`
   gsap.to(imgVideo, {
     opacity: 1,
   })
@@ -195,3 +195,81 @@ function sheryAnimation(){
   })
 }
 sheryAnimation()
+
+function heroText3Hover(){
+  const heroText3 = document.querySelector("#hero-text-3")
+const flagHoverImg = document.querySelector("#flag-hover-img")
+document.addEventListener("mousemove", (dets)=> {
+  gsap.to(flagHoverImg, {
+    x:dets.x,
+    y:dets.y
+  })
+})
+
+heroText3.addEventListener("mouseenter", ()=> {
+  gsap.to(flagHoverImg, {
+    opacity:1
+  })
+})
+heroText3.addEventListener("mouseleave", ()=> {
+  gsap.to(flagHoverImg, {
+    opacity:0
+  })
+})
+}
+// heroText3Hover()
+
+function footerLetsConnet(){
+  const footerLetsconnecth1 = document.querySelector("#footerLetsConnect h1");
+
+// ✅ Step 1: Set opacity to 1 directly (Textillate sets it to 0 by default)
+gsap.set(footerLetsconnecth1, { opacity: 1, visibility: "visible" });
+
+// ✅ Step 2: Setup Textillate WITHOUT autoStart
+$(footerLetsconnecth1).textillate({
+  autoStart: false,
+  in: { 
+    effect: 'fadeIn',
+    delayScale: 1.2,
+    delay: 50,
+    sync: false
+  }
+});
+
+// Step 3: Run it once on page load to show text
+$(footerLetsconnecth1).textillate('start');
+
+// ✅ Step 3: Store original font
+// const originalFont = window.getComputedStyle(footerLetsconnecth1).fontFamily;
+
+const footerSvg = document.querySelector("#footerLetsConnect svg")
+// ✅ Step 4: Hover IN → font change + animation
+footerLetsconnecth1.addEventListener("mouseenter", () => {
+  footerLetsconnecth1.style.fontStyle = "italic";
+  footerLetsconnecth1.style.webkitTextStroke = "0.5px #ffffff";
+  footerLetsconnecth1.style.color = "transparent";
+  footerLetsconnecth1.style.webkitTextFillColor = "transparent";
+  footerLetsconnecth1.style.fontWeight = "600";
+  footerSvg.style.marginLeft = "5%"
+
+  // Re-run textillate effect
+  $(footerLetsconnecth1).textillate('in');
+});
+
+// ✅ Step 5: Hover OUT → font revert + animation again
+footerLetsconnecth1.addEventListener("mouseleave", () => {
+  footerLetsconnecth1.style.fontStyle = "normal";
+  footerLetsconnecth1.style.webkitTextStroke = "0px transparent";
+  footerLetsconnecth1.style.color = "#ffffff";
+  footerLetsconnecth1.style.webkitTextFillColor = "#ffffff";
+  footerLetsconnecth1.style.fontWeight = "900";
+  footerSvg.style.marginLeft = "0%"
+
+
+  // Re-run textillate effect again
+  $(footerLetsconnecth1).textillate('in');
+});
+
+}
+
+footerLetsConnet()
