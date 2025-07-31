@@ -113,28 +113,7 @@ function loadingAnimation() {
     duration: 0.5
   })
 
-  gsap.from(".heding-wrapper h1", {
-    yPercent: 200,
-    ease: "power2.out",
-    duration: 0.5,
-    delay: 0.5,
-    scrollTrigger: {
-      trigger: "#page3",
-      scroller:"#main",
-      start: "top 98%",
-      end: "top 90%"
-    }
-  },'p3')
-  gsap.from("#num-p3", {
-    opacity: 0 ,
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: "#page3",
-      scroller:"#main",
-      start: "top 99%",
-      end: "top 90%",
-    }
-  },'p3')
+
 
 }
 loadingAnimation()
@@ -208,6 +187,152 @@ videoContainer.addEventListener("click", ()=> {
 }
 cursor();
 
+function page3ToFooterAnimation() {
+  gsap.registerPlugin(SplitText, ScrollTrigger);
+
+  // --- Setup SplitText for card headings ---
+  SplitText.create(".img-card-heading h1", {
+    type: "lines, words, chars",
+  });
+
+  const allCards = document.querySelectorAll(".img-card");
+
+  allCards.forEach((card) => {
+    const h1s = card.querySelectorAll(".img-card-heading h1");
+
+    // Hover animations
+    card.addEventListener("mouseenter", () => {
+      gsap.to(h1s[0], {
+        yPercent: -150,
+        ease: "power2.out",
+        duration: 0.9,
+      });
+      gsap.to(h1s[1], {
+        yPercent: -100,
+        ease: "power2.out",
+        duration: 0.9,
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(h1s[0], {
+        yPercent: 0,
+        ease: "power2.out",
+        duration: 0.9,
+      });
+      gsap.to(h1s[1], {
+        yPercent: 100,
+        ease: "power2.out",
+        duration: 0.9,
+      });
+    });
+
+    // Scroll animation for heading
+    const heading = card.querySelector("h1");
+    if (heading) {
+      gsap.from(heading, {
+        yPercent: 200,
+        ease: "power2.out",
+        duration: 0.5,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: card,
+          scroller: "#main",
+          start: "top 90%",
+          end: "top 70%",
+          scrub: 1,
+        },
+      });
+    }
+  });
+
+  // --- Text Animation in Page 4 ---
+  const p4Text = SplitText.create(".p4-content-wrapper p", {
+    type: "lines, words, chars",
+  });
+
+  gsap.from(p4Text.lines, {
+    yPercent: 200,
+    ease: "power2.out",
+    duration: 0.5,
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: ".p4-content-wrapper",
+      scroller: "#main",
+      start: "top 90%",
+      end: "top 60%",
+      scrub: 2,
+    },
+  });
+
+  // --- Page 4 Top Text ---
+  gsap.from(".p4-img-top p", {
+    opacity: 0,
+    ease: "power2.out",
+    duration: 0.5,
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: ".p4-content-wrapper",
+      scroller: "#main",
+      start: "top 50%",
+      end: "top 30%",
+      scrub: 2,
+    },
+  });
+
+  // --- Shared Heading + Span Animations ---
+  const sections = [
+    { trigger: "#page3", h1: ".heding-wrapper h1", span: "#num-p3" },
+    { trigger: ".p4-container", h1: ".p4-heading h1", span: ".line-num03" },
+    // Add more if needed
+  ];
+
+  sections.forEach(({ trigger, h1, span }) => {
+    gsap.from(h1, {
+      yPercent: 100,
+      opacity: 0,
+      ease: "power2.out",
+      duration: 0.6,
+      scrollTrigger: {
+        trigger,
+        scroller: "#main",
+        start: "top 90%",
+        end: "top 60%",
+        scrub: true,
+      },
+    });
+
+    gsap.from(span, {
+      opacity: 0,
+      y: 20,
+      ease: "power2.out",
+      duration: 0.5,
+      scrollTrigger: {
+        trigger,
+        scroller: "#main",
+        start: "top 85%",
+        end: "top 70%",
+        scrub: true,
+      },
+    });
+  });
+
+  // --- Footer Links ---
+  gsap.from("#f-links", {
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#footer",
+      scroller: "#main",
+      start: "top 45%",
+      end: "top 30%",
+      scrub: 2,
+    },
+  });
+}
+
+page3ToFooterAnimation();
 
 
 function sheryAnimation(){
