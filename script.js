@@ -205,12 +205,12 @@ function page3ToFooterAnimation() {
       gsap.to(h1s[0], {
         yPercent: -150,
         ease: "power2.out",
-        duration: 0.9,
+        duration: 1,
       });
       gsap.to(h1s[1], {
         yPercent: -100,
         ease: "power2.out",
-        duration: 0.9,
+        duration: 1,
       });
     });
 
@@ -218,12 +218,12 @@ function page3ToFooterAnimation() {
       gsap.to(h1s[0], {
         yPercent: 0,
         ease: "power2.out",
-        duration: 0.9,
+        duration: 1,
       });
       gsap.to(h1s[1], {
         yPercent: 100,
         ease: "power2.out",
-        duration: 0.9,
+        duration: 1,
       });
     });
 
@@ -330,6 +330,42 @@ function page3ToFooterAnimation() {
       scrub: 2,
     },
   });
+
+  document.querySelectorAll('.hover-animate-text').forEach((el) => {
+    const topText = el.querySelector('.text-top');
+    const bottomText = el.querySelector('.text-bottom');
+  
+    el.addEventListener('mouseenter', () => {
+      gsap.to(topText, {
+        yPercent: -100,
+        opacity: 0,
+        ease: 'power2.out',
+        duration: 0.4,
+      });
+      gsap.to(bottomText, {
+        yPercent: -100,
+        opacity: 1,
+        ease: 'power2.out',
+        duration: 0.4,
+      });
+    });
+  
+    el.addEventListener('mouseleave', () => {
+      gsap.to(topText, {
+        yPercent: 0,
+        opacity: 1,
+        ease: 'power2.out',
+        duration: 0.4,
+      });
+      gsap.to(bottomText, {
+        yPercent: 0,
+        opacity: 0,
+        ease: 'power2.out',
+        duration: 0.4,
+      });
+    });
+  });
+  
 }
 
 page3ToFooterAnimation();

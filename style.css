@@ -714,16 +714,34 @@ font-size: 1vw;
   display: flex;
   justify-content: space-between;
   /* align-items: flex-start; */
+  position: relative;
 
 }
-
 
 .f-l-box h6{
   font-size: 1.1vw;
   margin-bottom: 1.5vw;
 }
+
 .f-l-box h5{
   font-size: 1.7vw;
+}
+.hover-animate-text {
+  position: relative;
+  /* display: inline-block; */
+  overflow: hidden;
+  height: 2.1vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.hover-animate-text h5 {
+  /* display: block; */
+  /* transform: translateY(0%); */
+  /* transition: none; */
+  /* background-color: #d2d1d1; */
+  font-size: 1.7vw;
+  
 }
 
 .f-container p {
@@ -732,7 +750,7 @@ font-size: 1vw;
 #footerLetsConnect {
   display: flex;
 align-items: flex-start;
-justify-content: center;
+justify-content: flex-start;
 /* background-color: #FFA63D; */
 gap: 2vw;
 }
@@ -1055,7 +1073,8 @@ width: 50%;
 #f-links {
   width: 100%;
   flex-direction: column;
-  gap: 5vw;
+  /* background-color: #FFA63D; */
+  gap: 6vw;
 }
 
 
@@ -1069,6 +1088,21 @@ width: 50%;
 
 .f-container p {
   margin-top: 2.5vw;
+}
+.hover-animate-text {
+  /* background-color: #d2d1d1; */
+  height: 4vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.hover-animate-text h5 {
+  /* display: block; */
+  /* transform: translateY(0%); */
+  /* transition: none; */
+  width: fit-content;
+  font-size: 3.5vw;
+  
 }
 #footerLetsConnect {
 justify-content: flex-start;
